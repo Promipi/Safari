@@ -38,7 +38,7 @@ namespace BACKEND.Controllers
         }
 
         [HttpGet]
-        public async Task<ActionResult<GetResponseDto<TokenInfo>>> Get(int page = 1, int take = 10)
+        public async Task<ActionResult<GetResponseDto<DataCollection<User>>>> Get(int page = 1, int take = 10)
         {
             List<Func<User, bool>> filter = new List<Func<User, bool>>() { x => x.Id == x.Id };
             var response = await _userRepository.GetAsync(filter, page, take);

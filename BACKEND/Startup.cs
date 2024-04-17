@@ -47,8 +47,9 @@ namespace BACKEND
             services.AddSingleton(new MapperConfiguration(m => {
                 m.AddProfile(new MapperProfile());
             }).CreateMapper());
-
+            
             services.AddTransient<IUserRepository, UserRepository>();
+            services.AddTransient<IEventoRepository, EventoRepository>();
            
 
         }
@@ -62,7 +63,7 @@ namespace BACKEND
             }
 
             app.UseSwagger();
-            app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "Identity.Api v1"));
+            app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "hola v1"));
 
             app.UseRouting();
 

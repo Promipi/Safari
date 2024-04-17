@@ -10,6 +10,10 @@ namespace BACKEND.Persistence
 
         public DbSet<User> Users { get; set; }
 
+        public DbSet<Evento> Eventos { get; set; }
+
+        public DbSet<EventoToUser> EventosToUsers { get; set; }
+
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             base.OnConfiguring(optionsBuilder);
