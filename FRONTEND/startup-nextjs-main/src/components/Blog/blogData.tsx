@@ -32,7 +32,7 @@ const blogData: Blog[] = [
   },
   {
     id: 3,
-    title: "PASEO GASTRONOMICO",
+    title: "PASEO CULTURAL",
     paragraph:
       "Ofrcemos un tour culinario por mercados locales, donde los turistas prueban platos tradicionales y compran ingredientes frescos.",
     image: "/images/blog/trekking.jpg",
