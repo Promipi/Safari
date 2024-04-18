@@ -3,41 +3,34 @@ import { Menu } from "@/types/menu";
 const menuData: Menu[] = [
   {
     id: 1,
-    title: "Home",
+    title: "Inicio",
     path: "/",
     newTab: false,
   },
   {
     id: 2,
     title: "Nosotros",
-    path: "/about",
+    path: "/nosotros",
     newTab: false,
   },
   {
     id: 33,
     title: "Servicios",
-    path: "/blog",
-    newTab: false,
-  },
-  {
-    id: 3,
-    title: "Contacto",
-    path: "/contact",
+    path: "/servicios",
     newTab: false,
   },
   {
     id: 4,
-    title: "Otros",
+    // title: "Otros",
+    title: "Eventos",
     newTab: false,
-    submenu: [
-      {
-        id: 44,
-        title: "Cronograma de Eventos",
-        path: "/blog-sidebar",
-        newTab: false,
-      }
-
-    ],
+    path: "/eventos",
+  },
+  {
+    id: 3,
+    title: "Contacto",
+    path: "/contacto",
+    newTab: false,
   },
 ];
 export default menuData;
