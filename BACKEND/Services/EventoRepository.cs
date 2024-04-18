@@ -16,6 +16,7 @@ namespace BACKEND.Services
         public async Task<PostResponseDto<Evento>> CreateAsync(Evento eventoCreateDto)
         {
             var eventoNew = await _context.Eventos.AddAsync(eventoCreateDto);
+            await _context.SaveChangesAsync();
             var response = new PostResponseDto<Evento>
             {
                 Success = true,
@@ -100,6 +101,7 @@ namespace BACKEND.Services
         {
             var eventoToUser = new EventoToUser { UserId = userId, EventoId = eventId };
             var eventoToUserNew = await _context.EventosToUsers.AddAsync(eventoToUser);
+            await _context.SaveChangesAsync();
             var response = new PostResponseDto<EventoToUser>
             {
                 Success = true,
