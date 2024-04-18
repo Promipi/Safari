@@ -3,10 +3,13 @@ using BACKEND.Mapper;
 using BACKEND.Models;
 using BACKEND.Persistence;
 using BACKEND.Services;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection.Extensions;
+using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
+using System.Text;
 
 namespace BACKEND
 {
@@ -43,6 +46,19 @@ namespace BACKEND
                 opt.Password.RequireUppercase = true;
                 opt.Lockout = new LockoutOptions() { AllowedForNewUsers = false };
             }).AddEntityFrameworkStores<SafariDbContext>().AddDefaultTokenProviders();
+
+            services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).
+           AddJwtBearer(JwtBearerDefaults.AuthenticationScheme, options => {
+               options.TokenValidationParameters = new Microsoft.IdentityModel.Tokens.TokenValidationParameters()
+               {
+                   ValidateIssuer = false,
+                   ValidateAudience = false,
+                   ValidateLifetime = true,
+                   ValidateIssuerSigningKey = true,
+                   IssuerSigningKey = new SymmetricSecurityKey(
+                   Encoding.UTF8.GetBytes("this is my custom Secret key for authentication"))
+               };
+           });
 
             services.AddSingleton(new MapperConfiguration(m => {
                 m.AddProfile(new MapperProfile());

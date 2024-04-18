@@ -176,7 +176,7 @@ namespace BACKEND.Services
                 claims.Add(new Claim(ClaimTypes.Role, role)); //user roles have be added
             }
 
-            var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes("holacomoestas")); //for now the private key is matita
+            var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes("this is my custom Secret key for authentication")); //for now the private key is matita
             var creds = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
 
             var expiration = DateTime.UtcNow.AddDays(1);
