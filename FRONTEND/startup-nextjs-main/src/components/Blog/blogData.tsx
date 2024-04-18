@@ -3,10 +3,10 @@ import { Blog } from "@/types/blog";
 const blogData: Blog[] = [
   {
     id: 1,
-    title: "Best UI components for modern websites",
+    title: "SAFARI",
     paragraph:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sit amet dictum neque, laoreet dolor.",
-    image: "/images/blog/blog-01.jpg",
+      "Un paseo en auto explorando los diverosos parques nacionales, reservas naturales y áreas protegidas con nuestros guías expertos. Descubre la flora, fauna y la historia detrás de cada lugar.",
+    image: "/.next/cache/images/safari.jpg",
     author: {
       name: "Samuyl Joshi",
       image: "/images/blog/author-01.png",
@@ -17,10 +17,10 @@ const blogData: Blog[] = [
   },
   {
     id: 2,
-    title: "9 simple ways to improve your design skills",
+    title: "TREKKING",
     paragraph:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sit amet dictum neque, laoreet dolor.",
-    image: "/images/blog/blog-02.jpg",
+      "Senderos con marcadores de realidad aumentada, podes escanear códigos QR en la naturaleza para obtener información sobre la flora, fauna y la historia del lugar mietras te sumergis en la magia de la naturaleza.",
+    image: "/.next/cache/images/trekking.jpg",
     author: {
       name: "Musharof Chy",
       image: "/images/blog/author-02.png",
@@ -31,10 +31,10 @@ const blogData: Blog[] = [
   },
   {
     id: 3,
-    title: "Tips to quickly improve your coding speed.",
+    title: "PASEO GASTRONOMICO",
     paragraph:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sit amet dictum neque, laoreet dolor.",
-    image: "/images/blog/blog-03.jpg",
+      "Ofrcemos un tour culinario por mercados locales, donde los turistas prueban platos tradicionales y compran ingredientes frescos.",
+    image: "/.next/cache/images/gaatronomia.jpg",
     author: {
       name: "Lethium Deo",
       image: "/images/blog/author-03.png",
