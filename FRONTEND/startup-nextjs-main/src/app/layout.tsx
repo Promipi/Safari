@@ -1,5 +1,3 @@
-"use client";
-
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import ScrollToTop from "@/components/ScrollToTop";
@@ -9,13 +7,20 @@ import "../styles/index.css";
 
 const inter = Inter({ subsets: ["latin"] });
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
+  const session = await getServerSession(authOptions)
+
   return (
-    <html suppressHydrationWarning lang="en">
+    <html
+      className="
+        scroll-smooth"
+      suppressHydrationWarning
+      lang="es"
+    >
       {/*
         <head /> will contain the components returned by the nearest parent
         head.js. Find out more at https://beta.nextjs.org/docs/api-reference/file-conventions/head
@@ -23,15 +28,21 @@ export default function RootLayout({
       <head />
 
       <body className={`bg-[#FCFCFC] dark:bg-black ${inter.className}`}>
-        <Providers>
+        <Providers
+          session={session}
+        >
           <Header />
           {children}
           <Footer />
           <ScrollToTop />
+          <WhatsappContactButton />
         </Providers>
       </body>
     </html>
   );
 }
 
-import { Providers } from "./providers";
+import { Providers } from "./providers";import { getServerSession } from "next-auth";
+import { authOptions } from "./api/auth/[...nextauth]/route";
+import { WhatsappContactButton } from "@/components/WhatsappContactButton";
+

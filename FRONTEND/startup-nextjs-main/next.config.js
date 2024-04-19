@@ -8,6 +8,21 @@ const nextConfig = {
         hostname: "cdn.sanity.io",
         port: "",
       },
+      {
+        hostname: "proyectobohemia.com",
+        protocol: "https",
+        port: ""
+      },
+      {
+        hostname: "www.visitparaguay.net",
+        protocol: "https",
+        port: ""
+      },
+      {
+        hostname: "res.cloudinary.com",
+        protocol: "https",
+        port: ""
+      }
     ],
   },
 };

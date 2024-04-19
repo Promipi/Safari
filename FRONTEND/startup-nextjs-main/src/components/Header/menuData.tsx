@@ -3,41 +3,36 @@ import { Menu } from "@/types/menu";
 const menuData: Menu[] = [
   {
     id: 1,
-    title: "Home",
-    path: "/",
+    title: "Inicio",
+    path: "/#",
     newTab: false,
+    type: "anchor"
   },
   {
     id: 2,
     title: "Nosotros",
-    path: "/about",
+    path: "/#nosotros",
     newTab: false,
+    type: "anchor"
   },
   {
     id: 33,
     title: "Servicios",
-    path: "/blog",
+    path: "/#servicios",
     newTab: false,
+    type: "anchor"
+  },
+  {
+    id: 4,
+    title: "Actividades",
+    newTab: false,
+    path: "/actividades",
   },
   {
     id: 3,
     title: "Contacto",
-    path: "/contact",
+    path: "/contacto",
     newTab: false,
-  },
-  {
-    id: 4,
-    title: "Otros",
-    newTab: false,
-    submenu: [
-      {
-        id: 44,
-        title: "Cronograma de Eventos",
-        path: "/blog-sidebar",
-        newTab: false,
-      }
-
-    ],
   },
 ];
 export default menuData;
