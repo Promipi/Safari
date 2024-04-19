@@ -35,6 +35,7 @@ export default async function RootLayout({
           {children}
           <Footer />
           <ScrollToTop />
+          <WhatsappContactButton />
         </Providers>
       </body>
     </html>
@@ -43,4 +44,5 @@ export default async function RootLayout({
 
 import { Providers } from "./providers";import { getServerSession } from "next-auth";
 import { authOptions } from "./api/auth/[...nextauth]/route";
+import { WhatsappContactButton } from "@/components/WhatsappContactButton";
 

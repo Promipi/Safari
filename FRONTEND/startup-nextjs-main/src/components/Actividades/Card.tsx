@@ -1,6 +1,5 @@
 "use client"
 
-import { useSession } from "next-auth/react";
 import Image from "next/image";
 
 interface CardProps {
@@ -80,11 +79,13 @@ export function Card({
                         w-full
                         h-14
                         rounded-md
-                        bg-primary
+                        bg-green-600
+                        hover:bg-green-700
+                        duration-200
                         px-8
                         py-3
                         text-base
-                        font-medium
+                        font-bold
                         text-white"
                     onClick={() => {
 

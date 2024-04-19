@@ -13,8 +13,8 @@ import { Metadata } from "next";
 import Services from "@/components/Services";
 
 export const metadata: Metadata = {
-  title: "Free Next.js Template for Startup and SaaS",
-  description: "This is Home for Startup Nextjs Template",
+  title: "Bienvenido a EcoFauna",
+  description: "Página principal de EcoFauna",
   // other metadata
 };
 
@@ -25,12 +25,6 @@ export default function Home() {
       <Hero />
       <AboutUs />
       <Services />
-      {/* <Brands />
-      <AboutSectionOne />
-      <AboutSectionTwo />
-      <Testimonials />
-      <Pricing />
-      <Blog /> */}
       <Contact />
     </>
   );

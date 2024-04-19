@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { IconType } from "react-icons";
 
 interface CardProps {
@@ -64,10 +65,29 @@ export function Card({
                 <p
                     className="
                         text-gray-500
-                        text-center"
+                        text-center
+                        mb-8"
                 >
                     {description}
                 </p>
+                <Link
+                    href="/contacto"
+                    className="
+                        bg-green-700
+                        hover:bg-green-800
+                        duration-200
+                        h-14
+                        w-full
+                        px-8
+                        flex
+                        items-center
+                        justify-center
+                        text-white
+                        font-semibold
+                        rounded-md"
+                >
+                    Más Información
+                </Link>
             </div>
         </div>
     )

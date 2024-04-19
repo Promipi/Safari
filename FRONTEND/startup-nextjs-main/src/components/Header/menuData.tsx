@@ -24,10 +24,9 @@ const menuData: Menu[] = [
   },
   {
     id: 4,
-    // title: "Otros",
-    title: "Eventos",
+    title: "Actividades",
     newTab: false,
-    path: "/eventos",
+    path: "/actividades",
   },
   {
     id: 3,

@@ -21,29 +21,22 @@ export const authOptions: AuthOptions = {
             const password = `${profile.id}!aA`
             const image = data.profile.image
 
-            const user = await api.post("Users/SignUp", {
-                fullName: name,
-                username: username,
-                email: email,
-                password,
-                age: 18,
-                job: "string",
-                image: image ? image : ""
-            })
+            try {
+                const user = await api.post("Users/SignUp", {
+                    fullName: name,
+                    username: username,
+                    email: email,
+                    password,
+                    age: 18,
+                    job: "string",
+                    image: image ? image : ""
+                })
+            } catch (err) {
+                console.log(err)
+            }
             
             return true
         },
-        // session: async ({ session }) => {
-        //     const user = await api.post("Users/SignUp", {
-        //         fullName: name,
-        //         username: username,
-        //         email: email,
-        //         password,
-        //         age: 18,
-        //         job: "string",
-        //         image: image ? image : ""
-        //     })
-        // }
     }
 }
 

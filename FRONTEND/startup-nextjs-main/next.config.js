@@ -17,6 +17,11 @@ const nextConfig = {
         hostname: "www.visitparaguay.net",
         protocol: "https",
         port: ""
+      },
+      {
+        hostname: "res.cloudinary.com",
+        protocol: "https",
+        port: ""
       }
     ],
   },
