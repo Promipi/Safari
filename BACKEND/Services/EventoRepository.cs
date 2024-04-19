@@ -119,6 +119,7 @@ namespace BACKEND.Services
             try
             {
                 var updateEntity =  _context.Eventos.Find(eventoUpdateDto.Id);
+                updateEntity.NameType = eventoUpdateDto.NameType;
                 updateEntity.Description = eventoUpdateDto.Description;
                 updateEntity.Start = eventoUpdateDto.Start;
                 updateEntity.End = eventoUpdateDto.End;
