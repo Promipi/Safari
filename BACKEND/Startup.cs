@@ -32,6 +32,13 @@ namespace BACKEND
                 opt.UseSqlServer("Server=tcp:promi.database.windows.net,1433;Initial Catalog=Safari;Persist Security Info=False;User ID=promi;Password=gtx750ti!;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;", b => b.MigrationsAssembly("BACKEND"));
             });
 
+            services.AddCors(setupAction => setupAction.AddPolicy("AmigonimoPolicy", builder =>
+            {
+                builder.AllowAnyOrigin()
+                       .AllowAnyMethod()
+                       .AllowAnyHeader();
+            }));
+
             services.AddControllers();
 
             services.AddSwaggerGen(c =>

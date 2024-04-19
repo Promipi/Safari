@@ -5,11 +5,13 @@ using BACKEND.Models;
 using BACKEND.Services;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Cors;
 
 namespace BACKEND.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]
+    [EnableCors("AmigonimoPolicy")]
     public class UsersController : ControllerBase
     {
         private IUserRepository _userRepository;

@@ -1,12 +1,14 @@
 ﻿using BACKEND.Common;
 using BACKEND.Models;
 using BACKEND.Services;
+using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
 
 namespace BACKEND.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]
+    [EnableCors("AmigonimoPolicy")]
     public class EventosController : ControllerBase
     {
         //completar todos los metodos teniendo en cuenta que se debe inyectar el repositorio de eventos
