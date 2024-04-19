@@ -128,6 +128,9 @@ namespace BACKEND.Services
                  _context.Eventos.Update(updateEntity);
                  _context.SaveChanges();
 
+                response.Success = true;
+                response.Message = "Updated Successfully";
+
             }catch(Exception ex)
             {
                 response.Message = ex.Message;
