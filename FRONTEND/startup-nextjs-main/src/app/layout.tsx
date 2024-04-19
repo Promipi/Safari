@@ -15,7 +15,12 @@ export default async function RootLayout({
   const session = await getServerSession(authOptions)
 
   return (
-    <html suppressHydrationWarning lang="es">
+    <html
+      className="
+        scroll-smooth"
+      suppressHydrationWarning
+      lang="es"
+    >
       {/*
         <head /> will contain the components returned by the nearest parent
         head.js. Find out more at https://beta.nextjs.org/docs/api-reference/file-conventions/head

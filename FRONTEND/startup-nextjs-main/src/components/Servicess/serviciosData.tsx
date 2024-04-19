@@ -6,10 +6,10 @@ const blogData: Blog[] = [
     title: "SAFARI",
     paragraph:
       "Un paseo en auto explorando los diverosos parques nacionales, reservas naturales y áreas protegidas con nuestros guías expertos. Descubre la flora, fauna y la historia detrás de cada lugar.",
-    image: "/.next/cache/images/safari.jpg",
+    image: "/images/servicios/safari.jpg",
     author: {
       name: "Samuyl Joshi",
-      image: "/images/blog/author-01.png",
+      image: "/images/servicios/author-01.png",
       designation: "Graphic Designer",
     },
     tags: ["creative"],
@@ -20,10 +20,10 @@ const blogData: Blog[] = [
     title: "TREKKING",
     paragraph:
       "Senderos con marcadores de realidad aumentada, podes escanear códigos QR en la naturaleza para obtener información sobre la flora, fauna y la historia del lugar mietras te sumergis en la magia de la naturaleza.",
-    image: "/.next/cache/images/trekking.jpg",
+    image: "/images/servicios/trekking.jpg",
     author: {
       name: "Musharof Chy",
-      image: "/images/blog/author-02.png",
+      image: "/images/servicios/author-02.png",
       designation: "Content Writer",
     },
     tags: ["computer"],
@@ -34,10 +34,10 @@ const blogData: Blog[] = [
     title: "PASEO GASTRONOMICO",
     paragraph:
       "Ofrcemos un tour culinario por mercados locales, donde los turistas prueban platos tradicionales y compran ingredientes frescos.",
-    image: "/.next/cache/images/gaatronomia.jpg",
+    image: "/images/servicios/gastronomia.jpg",
     author: {
       name: "Lethium Deo",
-      image: "/images/blog/author-03.png",
+      image: "/images/servicios/author-03.png",
       designation: "Graphic Designer",
     },
     tags: ["design"],
