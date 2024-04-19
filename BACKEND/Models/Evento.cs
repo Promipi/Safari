@@ -2,7 +2,7 @@
 {
     public class Evento
     {
-        public string Id { get; set; }
+        public string Id { get; set; } = Guid.NewGuid().ToString();
         public string NameType { get; set; }
 
         public DateTime Start { get; set; }
