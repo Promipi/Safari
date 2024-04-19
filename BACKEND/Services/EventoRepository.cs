@@ -15,6 +15,7 @@ namespace BACKEND.Services
         }
         public async Task<PostResponseDto<Evento>> CreateAsync(Evento eventoCreateDto)
         {
+            eventoCreateDto.Id = Guid.NewGuid().ToString();
             var eventoNew = await _context.Eventos.AddAsync(eventoCreateDto);
             await _context.SaveChangesAsync();
             var response = new PostResponseDto<Evento>
